@@ -18,6 +18,7 @@ arch:
 init: false
 map:
   - share:rw
+  - config:rw
 options:
   retention: "99y"
   additionalArguments: ""
