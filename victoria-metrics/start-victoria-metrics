@@ -25,6 +25,8 @@ then
     PROMETHEUSARGS="-promscrape.config /prometheus.yml"
 fi
 
+bashio::log.info "Result config"
+cat /prometheus.yml
 
 config_dir=/config
 vm_config_dir=$config_dir/victoriametrics

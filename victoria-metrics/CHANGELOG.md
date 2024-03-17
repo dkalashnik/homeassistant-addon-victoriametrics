@@ -1,3 +1,7 @@
+## 1.8.27
+
+- Add ability to use extra scrape configs
+
 ## 1.8.23
 
 - Updated to VictoriaMetrics 1.99.0
