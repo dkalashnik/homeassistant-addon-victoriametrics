@@ -12,3 +12,8 @@ scrape_configs:
     scheme: {{.scheme}}
     static_configs:
       - targets: ['{{.homeassistantUrl}}']
+
+{{- if .extraScrapeConfigs }}
+scrape_config_files:
+  - /config/victoriametrics/extra_scrape_configs.yml
+{{- end }}

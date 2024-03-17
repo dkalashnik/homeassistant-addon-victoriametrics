@@ -26,6 +26,15 @@ then
 fi
 
 
+config_dir=/config
+vm_config_dir=$config_dir/victoriametrics
+mkdir -p $vm_config_dir
+chmod 750 $vm_config_dir
+
+extra_config_file=$vm_config_dir/extra_scrape_configs.yml
+touch $web_config_file
+chmod 740 $web_config_file
+
 bashio::log.info "Starting Victoria Metrics with retention set to $RETENTION"
 bashio::log.info "Starting Victoria Metrics with args set to $ARGS"
 "/victoria-metrics-prod" "-storageDataPath" "/share/victoria-metrics-data" -retentionPeriod $RETENTION $HTTPAUTHARGS $PROMETHEUSARGS $ARGS
